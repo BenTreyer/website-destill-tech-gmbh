@@ -59,14 +59,26 @@
 })();
 
 /* -----------------------------------------------
-   3. AKTIVEN NAV-LINK MARKIEREN
+   3. SCROLL-SPY – aktiven Abschnitt in der Nav markieren
    ----------------------------------------------- */
-(function markActiveLink() {
-  const page = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.main-nav__item a').forEach(link => {
-    const href = (link.getAttribute('href') || '').split('/').pop();
-    if (href === page) link.classList.add('active');
-  });
+(function initScrollSpy() {
+  const sections = document.querySelectorAll('main > section[id], main > div[id]');
+  const navLinks = document.querySelectorAll('.main-nav__item a');
+  if (!sections.length || !navLinks.length) return;
+
+  const activate = id => {
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) activate(entry.target.id);
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
 })();
 
 /* -----------------------------------------------
