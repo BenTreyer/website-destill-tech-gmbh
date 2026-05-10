@@ -17,6 +17,9 @@
 </head>
 <body>
 
+  <!-- Scroll-Fortschrittsbalken (wird per JS befüllt) -->
+  <div class="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
   <a href="#start" class="skip-link">Zum Inhalt springen</a>
 
   <!-- ============================================================
@@ -86,7 +89,11 @@
         <!-- SCHLAGWORT HIER ANPASSEN -->
         <span class="hero__tag">Handwerk aus Überzeugung</span>
         <!-- HAUPTÜBERSCHRIFT HIER ANPASSEN -->
-        <h1 class="hero__title">Holz verbindet –<br>Qualität überzeugt.</h1>
+        <!-- TYPEWRITER-PHRASEN IN js/main.js ANPASSEN -->
+        <h1 class="hero__title">
+          Holz verbindet –<br>
+          <span class="hero__typed" aria-live="polite"></span><span class="hero__typed-cursor" aria-hidden="true"></span>
+        </h1>
         <!-- HERO-TEXT HIER ANPASSEN -->
         <p class="hero__lead">
           Als familiengeführte Zimmerei mit über 35 Jahren Erfahrung realisieren wir
@@ -435,15 +442,16 @@
         <div class="stats-grid">
           <!-- KENNZAHLEN HIER ANPASSEN -->
           <div class="stat-item">
-            <div class="stat-item__number">seit 1985</div>
+            <!-- data-from / data-target für Zähler-Animation -->
+            <div class="stat-item__number" data-from="1970" data-target="1985" data-prefix="seit ">seit 1985</div>
             <div class="stat-item__label">in Familienhand</div>
           </div>
           <div class="stat-item">
-            <div class="stat-item__number">200+</div>
+            <div class="stat-item__number" data-from="0" data-target="200" data-suffix="+">200+</div>
             <div class="stat-item__label">abgeschlossene Projekte</div>
           </div>
           <div class="stat-item">
-            <div class="stat-item__number">12</div>
+            <div class="stat-item__number" data-from="0" data-target="12">12</div>
             <div class="stat-item__label">engagierte Mitarbeiter</div>
           </div>
         </div>

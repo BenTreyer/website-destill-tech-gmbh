@@ -1130,7 +1130,63 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 }
 
 /* =============================================
-   24. MOBILE-NAVIGATION (max 959 px)
+   24. MOTION & ANIMATIONEN
+   ============================================= */
+
+/* --- Scroll-Fortschrittsbalken --- */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  transform-origin: left center;
+  transform: scaleX(0);
+  z-index: 2001;
+  pointer-events: none;
+  transition: transform 0.1s linear;
+}
+
+/* --- Typewriter-Cursor im Hero --- */
+.hero__typed-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background-color: var(--color-accent);
+  margin-left: 3px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: cursor-blink 0.75s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* --- Parallax: Hero-Bild etwas höher damit Überlauf nicht sichtbar --- */
+.hero__image img {
+  height: 115%;
+  width: 100%;
+  position: absolute;
+  top: -7.5%;
+  left: 0;
+  will-change: transform;
+}
+
+/* --- Abschnitt-Überschriften: Slide-in von unten --- */
+.section__header {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.section__header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   25. MOBILE-NAVIGATION (max 959 px)
    ============================================= */
 @media (max-width: 959px) {
   .nav-toggle { display: flex; }
