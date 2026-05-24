@@ -226,7 +226,6 @@
     '.news-card',
     '.stat-item',
     '.team-card',
-    '.process-step',
     '.project-item',
     '.contact-info-card',
     '.feature-card',
