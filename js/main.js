@@ -97,10 +97,10 @@
 
   /* PHRASEN HIER ANPASSEN */
   const phrases = [
-    'Qualität überzeugt.',
-    'Projekte, die bleiben.',
-    'Handwerk mit Herz.',
-    'Träume aus Holz.',
+    'Präzision in jeder Anlage.',
+    'Qualität aus Oberkirch.',
+    'Technik, die begeistert.',
+    'Europaweit bewährt.',
   ];
 
   let phraseIdx = 0;
