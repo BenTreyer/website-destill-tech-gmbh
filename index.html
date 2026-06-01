@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
 
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -28,16 +31,11 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <!-- LOGO: DT-Initialen in Stahl-Blau und Kupfer -->
-      <a href="#start" class="logo" aria-label="Destill Tech GmbH – nach oben">
-        <svg class="logo__icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="44" height="44" rx="8" fill="#1E3A5A"/>
-          <text x="22" y="29" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#C07820">DT</text>
-        </svg>
-        <span class="logo__text">
-          <span class="logo__name">Destill Tech</span>
-          <span class="logo__sub">GmbH &middot; seit 1999</span>
-        </span>
+      <!-- LOGO: offizielles Destill-Tech-Logo -->
+      <a href="#start" class="logo" aria-label="Destill Tech GmbH – zur Startseite">
+        <img class="logo__img" src="assets/logo.png"
+          alt="Destill Tech GmbH – Apparatebau &amp; Brennereianlagen"
+          width="680" height="358" />
       </a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
@@ -69,7 +67,7 @@
     <section class="hero" aria-label="Willkommen">
       <div class="hero__image" aria-hidden="true">
         <img
-          src="https://picsum.photos/seed/destill-brennerei-anlage/1600/900"
+          src="assets/img/hero-brennerei.jpg"
           alt="Kupferdestillieranlage in einer modernen Brennerei"
           width="1600" height="900"
           loading="eager" fetchpriority="high"
@@ -117,7 +115,7 @@
           <div class="service-detail-card" id="brennereieinrichtungen">
             <div class="service-detail-card__image-wrap">
               <img class="service-detail-card__image"
-                src="https://picsum.photos/seed/kupfer-brennerei-destill/800/500"
+                src="assets/img/leistung-brennerei.jpg"
                 alt="Kupferdestillieranlage für eine Obstbrennerei"
                 width="800" height="500" loading="lazy" />
               <div class="service-detail-card__icon-wrap" aria-hidden="true">
@@ -148,7 +146,7 @@
           <div class="service-detail-card" id="apparatebau">
             <div class="service-detail-card__image-wrap">
               <img class="service-detail-card__image"
-                src="https://picsum.photos/seed/apparatebau-behaelter-edelstahl/800/500"
+                src="assets/img/leistung-apparatebau.jpg"
                 alt="Edelstahlbehälter in der Werkstatt der Destill Tech GmbH"
                 width="800" height="500" loading="lazy" />
               <div class="service-detail-card__icon-wrap" aria-hidden="true">
@@ -179,7 +177,7 @@
           <div class="service-detail-card" id="rohrleitungsbau">
             <div class="service-detail-card__image-wrap">
               <img class="service-detail-card__image"
-                src="https://picsum.photos/seed/rohrleitungen-prozessanlage/800/500"
+                src="assets/img/leistung-rohrleitung.jpg"
                 alt="Rohrleitungssystem in einer Prozessanlage"
                 width="800" height="500" loading="lazy" />
               <div class="service-detail-card__icon-wrap" aria-hidden="true">
@@ -210,7 +208,7 @@
           <div class="service-detail-card" id="blechkonstruktionen">
             <div class="service-detail-card__image-wrap">
               <img class="service-detail-card__image"
-                src="https://picsum.photos/seed/blechkonstruktion-schweissen/800/500"
+                src="assets/img/leistung-blech.jpg"
                 alt="Schweißarbeiten an einer Blechkonstruktion"
                 width="800" height="500" loading="lazy" />
               <div class="service-detail-card__icon-wrap" aria-hidden="true">
@@ -260,7 +258,7 @@
         <div class="projects-grid">
 
           <div class="project-item">
-            <img src="https://picsum.photos/seed/brennerei-schwarzwald-kupfer/600/450"
+            <img src="assets/img/ref-1.jpg"
               alt="Kupfer-Brennereianlage für eine Obstbrennerei im Schwarzwald"
               width="600" height="450" loading="lazy" />
             <div class="project-item__overlay">
@@ -269,7 +267,7 @@
           </div>
 
           <div class="project-item">
-            <img src="https://picsum.photos/seed/destillierkolonne-industrie/600/450"
+            <img src="assets/img/ref-2.jpg"
               alt="Industrielle Destillierkolonne aus Edelstahl"
               width="600" height="450" loading="lazy" />
             <div class="project-item__overlay">
@@ -278,7 +276,7 @@
           </div>
 
           <div class="project-item">
-            <img src="https://picsum.photos/seed/maischebehaelter-weingut/600/450"
+            <img src="assets/img/ref-3.jpg"
               alt="Maischebehälter aus Edelstahl für ein Weingut"
               width="600" height="450" loading="lazy" />
             <div class="project-item__overlay">
@@ -287,7 +285,7 @@
           </div>
 
           <div class="project-item">
-            <img src="https://picsum.photos/seed/rohrleitungssystem-lebensmittel/600/450"
+            <img src="assets/img/ref-4.jpg"
               alt="Hygienisches Rohrleitungssystem in einem Lebensmittelbetrieb"
               width="600" height="450" loading="lazy" />
             <div class="project-item__overlay">
@@ -296,7 +294,7 @@
           </div>
 
           <div class="project-item">
-            <img src="https://picsum.photos/seed/edelstahlbehaelter-molkerei/600/450"
+            <img src="assets/img/ref-5.jpg"
               alt="Edelstahlbehälter für eine Käserei"
               width="600" height="450" loading="lazy" />
             <div class="project-item__overlay">
@@ -305,7 +303,7 @@
           </div>
 
           <div class="project-item">
-            <img src="https://picsum.photos/seed/kupferhelm-kleinbrennerei/600/450"
+            <img src="assets/img/ref-6.jpg"
               alt="Kupferdestillierhelm für eine Kleinbrennerei"
               width="600" height="450" loading="lazy" />
             <div class="project-item__overlay">
@@ -365,7 +363,7 @@
           <div class="about-image">
             <!-- TODO: Echtes Team-/Werkstattfoto einsetzen (800 × 600 px) -->
             <img
-              src="https://picsum.photos/seed/destilltech-werkstatt-team/800/600"
+              src="assets/img/werkstatt.jpg"
               alt="Werkstatt der Destill Tech GmbH in Oberkirch"
               width="800" height="600" loading="lazy" />
           </div>
@@ -406,31 +404,27 @@
         <div class="team-grid">
 
           <div class="team-card">
-            <!-- TODO: Echtes Porträtfoto Rudolf Huber einsetzen (300 × 300 px) -->
-            <img class="team-card__photo"
-              src="https://picsum.photos/seed/rudolf-huber-destilltech/300/300"
-              alt="Porträtfoto von Rudolf Huber"
-              width="300" height="300" loading="lazy" />
+            <!-- TODO: Durch echtes Porträtfoto Rudolf Huber ersetzen (300 × 300 px) -->
+            <div class="team-card__avatar" aria-hidden="true">RH</div>
             <h4 class="team-card__name">Rudolf Huber</h4>
             <p class="team-card__role">Geschäftsführer</p>
           </div>
 
           <div class="team-card">
-            <!-- TODO: Echtes Porträtfoto Berthold Schmiederer einsetzen (300 × 300 px) -->
-            <img class="team-card__photo"
-              src="https://picsum.photos/seed/berthold-schmiederer-destilltech/300/300"
-              alt="Porträtfoto von Berthold Schmiederer"
-              width="300" height="300" loading="lazy" />
+            <!-- TODO: Durch echtes Porträtfoto Berthold Schmiederer ersetzen (300 × 300 px) -->
+            <div class="team-card__avatar" aria-hidden="true">BS</div>
             <h4 class="team-card__name">Berthold Schmiederer</h4>
             <p class="team-card__role">Geschäftsführer</p>
           </div>
 
           <div class="team-card">
-            <!-- TODO: Weiteres Teammitglied mit echtem Foto und Name eintragen -->
-            <img class="team-card__photo"
-              src="https://picsum.photos/seed/destilltech-team-buero/300/300"
-              alt="Mitarbeiterin im Büro der Destill Tech GmbH"
-              width="300" height="300" loading="lazy" />
+            <!-- TODO: Durch echtes Teamfoto ersetzen (300 × 300 px) -->
+            <div class="team-card__avatar" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
             <h4 class="team-card__name">Team Büro &amp; Vertrieb</h4>
             <p class="team-card__role">Angebote &amp; Kundenbetreuung</p>
           </div>
@@ -459,7 +453,7 @@
           <article class="news-card">
             <div class="news-card__image-wrap">
               <img class="news-card__image"
-                src="https://picsum.photos/seed/kupferanlage-obst-2025/800/500"
+                src="assets/img/news-1.jpg"
                 alt="Neue Kupfer-Brennereianlage für eine Obstbrennerei im Schwarzwald"
                 width="800" height="500" loading="lazy" />
             </div>
@@ -485,7 +479,7 @@
           <article class="news-card">
             <div class="news-card__image-wrap">
               <img class="news-card__image"
-                src="https://picsum.photos/seed/werkstatt-kapazitaet-2024/800/500"
+                src="assets/img/news-2.jpg"
                 alt="Erweiterte Werkstattkapazitäten bei der Destill Tech GmbH"
                 width="800" height="500" loading="lazy" />
             </div>
@@ -510,7 +504,7 @@
           <article class="news-card">
             <div class="news-card__image-wrap">
               <img class="news-card__image"
-                src="https://picsum.photos/seed/drinktec-muenchen-messe/800/500"
+                src="assets/img/news-3.jpg"
                 alt="drinktec Messe München – Destill Tech GmbH als Aussteller"
                 width="800" height="500" loading="lazy" />
             </div>
@@ -639,11 +633,9 @@
 
       <div>
         <div class="footer-brand__logo">
-          <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="44" height="44" rx="8" fill="#1E3A5A"/>
-            <text x="22" y="29" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#C07820">DT</text>
-          </svg>
-          <span class="footer-brand__name">Destill Tech GmbH</span>
+          <img class="footer-brand__img" src="assets/logo.png"
+            alt="Destill Tech GmbH – Apparatebau &amp; Brennereianlagen"
+            width="680" height="358" />
         </div>
         <p class="footer-brand__desc">
           Ihr Spezialist für Brennereieinrichtungen und Apparatebau in Oberkirch.

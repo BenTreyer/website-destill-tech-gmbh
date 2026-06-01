@@ -1,0 +1,5 @@
+# Interne Tooling-/Board-Daten (nicht Teil der Website)
+.claude-kanban/
+
+# macOS
+.DS_Store

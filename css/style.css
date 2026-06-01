@@ -283,6 +283,17 @@ p:last-child { margin-bottom: 0; }
 
 .logo__icon { width: 44px; height: 44px; flex-shrink: 0; }
 
+/* Offizielles Logo-Bild im Header */
+.logo__img {
+  height: 48px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+@media (max-width: 420px) {
+  .logo__img { height: 40px; }
+}
+
 .logo__text {
   display: flex;
   flex-direction: column;
@@ -530,6 +541,8 @@ p:last-child { margin-bottom: 0; }
    10. SERVICE-DETAIL-KARTEN (Leistungen-Seite)
    ============================================= */
 .service-detail-card {
+  --sdc-img-h: 220px;
+  position: relative;          /* Containing-Block fuer das ueberlappende Icon */
   background: var(--color-white);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
@@ -543,9 +556,11 @@ p:last-child { margin-bottom: 0; }
 .service-detail-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 
 .service-detail-card__image-wrap {
-  position: relative;
+  /* position: static -> das Icon wird relativ zur Card (Vorfahre) positioniert und
+     entkommt damit diesem overflow:hidden, das nur noch den Bild-Zoom clippt. */
+  position: static;
   overflow: hidden;
-  height: 220px;
+  height: var(--sdc-img-h);
 }
 
 .service-detail-card__image {
@@ -566,7 +581,9 @@ p:last-child { margin-bottom: 0; }
   border-radius: 50%;
   background-color: var(--color-secondary);
   position: absolute;
-  bottom: -32px;
+  /* sitzt auf der Bildunterkante und ragt nach unten ueber — wird dank
+     position:static am image-wrap nicht mehr abgeschnitten. */
+  top: calc(var(--sdc-img-h) - 32px);
   left: var(--space-6);
   box-shadow: var(--shadow-md);
 }
@@ -691,6 +708,31 @@ p:last-child { margin-bottom: 0; }
 }
 
 .team-card:hover .team-card__photo { transform: scale(1.04); box-shadow: var(--shadow-lg); }
+
+/* Initialen-Avatar (Platzhalter bis echte Mitarbeiterfotos vorliegen) */
+.team-card__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto var(--space-4);
+  border: 4px solid var(--color-bg-alt);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  transition: transform var(--transition), box-shadow var(--transition);
+  user-select: none;
+}
+
+.team-card__avatar svg { width: 54px; height: 54px; color: rgba(255,255,255,0.92); }
+
+.team-card:hover .team-card__avatar { transform: scale(1.04); box-shadow: var(--shadow-lg); }
 
 .team-card__name { font-size: var(--fs-lg); margin-bottom: var(--space-1); }
 
@@ -965,6 +1007,16 @@ textarea.form-control { min-height: 140px; resize: vertical; }
   font-family: var(--font-heading);
   font-size: var(--fs-lg);
   color: var(--color-white);
+}
+
+/* Offizielles Logo im dunklen Footer: heller Pill, damit der dunkle Schriftzug lesbar bleibt */
+.footer-brand__img {
+  height: 60px;
+  width: auto;
+  display: block;
+  background: var(--color-white);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
 }
 
 .footer-brand__desc { font-size: var(--fs-sm); line-height: 1.75; margin-bottom: 0; }
