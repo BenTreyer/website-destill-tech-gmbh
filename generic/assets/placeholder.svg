@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Bild-Platzhalter">
+  <rect width="1200" height="800" fill="#E8E3DA"/>
+  <rect x="40" y="40" width="1120" height="720" fill="none" stroke="#C7BEA9" stroke-width="3" stroke-dasharray="14 12" rx="10"/>
+  <g transform="translate(600 360)" fill="none" stroke="#B3A98E" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="-150" y="-100" width="300" height="200" rx="14"/>
+    <circle cx="-78" cy="-34" r="26" fill="#B3A98E" stroke="none"/>
+    <path d="M-150 70 L-40 -20 L30 46 L96 -28 L150 40 L150 100 L-150 100 Z" fill="#B3A98E" stroke="none"/>
+  </g>
+  <text x="600" y="540" font-family="'Inter', system-ui, sans-serif" font-size="40" font-weight="600" fill="#9C927B" text-anchor="middle">Bild-Platzhalter</text>
+  <text x="600" y="592" font-family="'Inter', system-ui, sans-serif" font-size="26" fill="#B3A98E" text-anchor="middle">hier eigenes Bild einsetzen</text>
+</svg>
